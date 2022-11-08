@@ -11,8 +11,14 @@ describe('Home', () => {
 
     expect(list).toBeInTheDocument();
 
-    const listItems = screen.getAllByRole('listitem');
+    const listItems = screen.queryAllByRole('listitem');
 
+    // just delete 5 or uncomment:
+    // expect(listItems).toHaveLength();
     expect(listItems).toHaveLength(5);
+
+    const buttons = screen.queryByRole('button');
+
+    expect(buttons).not.toBeInTheDocument();
   });
 });

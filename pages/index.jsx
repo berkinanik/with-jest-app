@@ -5,19 +5,19 @@ import styles from './index.module.css';
 export default function Home() {
   const items = [
     'item',
-    'item',
-    'item',
-    'item',
-    'item',
+    'item1',
+    'item3',
+    'item2',
+    'item4',
   ];
 
   return (
     <div className={styles.container}>
       <ul>
         {items.map((item, index) => (
-          <li key={`${item}index`}>
+          <li key={item}>
             {' '}
-            {`${item}#${index}`}
+            {`${item}: #${index}`}
             {' '}
           </li>
         ))}
